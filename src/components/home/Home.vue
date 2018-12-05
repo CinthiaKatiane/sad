@@ -1,27 +1,15 @@
 <template>
-<div>
-<!-- Navigation -->
-    <nav class="navbar navbar-light bg-light static-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <div class="row">
-           <img src="./../img/a.png" width="50" height="50" class="d-inline-block align-top" alt="">
-           <h1 class="ml-3" >SAD</h1>
-           </div>
-        </a>
-        <a class="btn btn-primary" href="#">Login</a>
-      </div>
-    </nav>
-
+  <div>
     <!-- Masthead -->
     <header class="masthead text-white text-center">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-xl-9 mx-auto">
-            <h1 class='mb-1'>S.A.D.</h1>
             <h1 class="mb-1">Sistema de Avaliação de Docentes</h1>
-            <h3 class="mb-5">Esse sistema vai fazer seu semestre mais feliz</h3>
+            <h3 class="mb-5">Digite o nome do docente ou disciplina que você procura no campo abaixo
+              para saber as informações e opiniões dos alunos sobre eles.
+            </h3>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
             <form>
@@ -32,7 +20,7 @@
                 </div>
                 <div class="col-12 col-md-3">
                   <router-link :to="{name: 'Perfil'}">
-                    <button class="btn btn-block btn-lg btn-primary">Buscar</button>
+                    <button class="btn btn-block btn-lg btn-primary">IR</button>
                   </router-link>
                 </div>
               </div> 
@@ -70,7 +58,7 @@
                 <i class="icon-check m-auto text-primary"></i>
               </div>
               <h3>Avalie os docentes</h3>
-              <p class="lead mb-0">Para aqueles professores que você já conhece, você pode nós ajudar avaliando seu desempenho.</p>
+              <p class="lead mb-0">Para aqueles professores que você já conhece, você pode nós ajudar avaliando seu desempenho e postura.</p>
             </div>
           </div>
         </div>
@@ -88,8 +76,16 @@
           </div>
           <div class="col-lg-6 order-lg-1 showcase-text">
             <h2>Sobre</h2>
-            <p class="">Esse é um sistema feito por alunos e para alunos. 
-              Nós esperamos que esse sistema possa ajudar os alunos ao ... </p>
+            <p class="">
+              SAD é um sistema idealizado para os alunos do IMD E consiste em uma plataforma
+              para ajudar o discente a encontrar informações sobre os professores de forma 
+              mais fácil e mais completa.
+              <br> 
+              Essas informações são coletadas dos dados de avaliação institucional do 
+              docente (Dados Abertos da UFRN), informações de currículo e a avaliação realizada
+              pelos discentes nessa plataforma.
+   
+            </p>
           </div>
         </div>
       </div>
@@ -197,7 +193,7 @@
         </div>
       </div>
     </footer>
-</div>
+  </div>
 </template>
 
 <script>
@@ -212,6 +208,26 @@ export default {
     return{
       search:'',
       teachers:['Cinthia', 'Jair Leite', 'Eiji Adachi'],
+      classes: ['TECNOLOGIA DA INFORMAÇÃO E SOCIEDADE', 
+                'PRÁTICAS DE LEITURA E ESCRITA EM PORTUGUÊS I',
+                'CÁLCULO DIFERENCIAL E INTEGRAL I',
+                'PROBABILIDADE', 'PRÁTICAS DE LEITURA E ESCRITA EM PORTUGUÊS II',
+                'INTRODUÇÃO ÀS TÉCNICAS DE PROGRAMAÇÃO', 'ESTRUTURA DE DADOS BÁSICAS I',
+                'VETORES E GEOMETRIA ANALÍTICA', 'ESTRUTURAS DE DADOS BÁSICAS II', 
+                'REDES DE COMPUTADORES', 'LINGUAGEM DE PROGRAMAÇÃO I',
+                'FUNDAMENTOS MATEMÁTICOS DA COMPUTAÇÃO I', 
+                'RESOLUÇÃO DE PROBLEMAS MATEMÁTICOS PARA TI', 
+                'PRÁTICAS DE LEITURA EM INGLÊS', 'LINGUAGEM DE PROGRAMAÇÃO II', 
+                'FUNDAMENTOS MATEMÁTICOS DA COMPUTAÇÃO II','SISTEMAS OPERACIONAIS',
+                'CIRCUITOS LÓGICOS', 'ORGANIZAÇÃO E ARQUITETURA DE COMPUTADORES',
+                'INTRODUÇÃO AO CÁLCULO', 'LABORATÓRIO DE PROGRAMAÇÃO I',
+                'LABORATÓRIO DE PROGRAMAÇÃO II', 'FUNDAMENTOS MATEMÁTICOS DA COMPUTAÇÃO',
+                'PRÁTICAS DE LEITURA E ESCRITA EM INGLÊS', 'ELEMENTOS DE MATEMÁTICA PARA COMPUTAÇÃO',
+                'BANCO DE DADOS', 'INTRODUÇÃO A ORGANIZAÇÃO E ARQUITETURA DE COMPUTADORES', 
+                'DESENVOLVIMENTO DE SISTEMAS WEB II', 'DESENVOLVIMENTO DE SISTEMAS WEB I',
+                'INTRODUÇÃO A SISTEMAS OPERACIONAIS']
+
+
     }
   }
 }

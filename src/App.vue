@@ -1,11 +1,17 @@
 <template>
-    <router-view></router-view>
+    <v-app>
+      <Header/>
+      <router-view></router-view>
+    </v-app>
 </template>
 
 <script>
-
+import Header from "./components/sharedComponents/header"
 export default {
   name: 'app',
+  components:{
+    Header
+  }
 }
 </script>
 
